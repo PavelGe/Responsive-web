@@ -1,0 +1,102 @@
+body {
+  background-color: rgb(235, 200, 200);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 60rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    margin: 0 auto;
+  }
+}
+
+header img {
+  height: 10rem;
+}
+
+.box {
+  background-color: white;
+  border-radius: 3px;
+  margin: 0rem 1rem 1.5rem;
+  padding: 1.5rem 1rem;
+  box-shadow: 5px 5px 2px 1px rgba(3, 3, 12, 0.1);
+}
+
+.nav {
+  background-color: white;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+nav a {
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+  color: rgb(97, 97, 156);
+}
+
+nav a:hover {
+  background-color: rgb(135, 126, 126);
+  color: white;
+}
+
+.logo_container {
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo_text {
+  color: rgba(39, 38, 38, 0.8);
+}
+
+@media only screen and (min-width: 600px) {
+  .nav {
+    flex-direction: row;
+  }
+  nav a {
+    text-decoration: none;
+    border-bottom: none;
+    color: black;
+  }
+}
+
+.box h1 {
+  font-weight: 100;
+}
+
+.help {
+  display: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .help {
+    display: block;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "sidebar main"
+      "help main";
+  }
+  .login {
+    grid-area: sidebar;
+  }
+  .help {
+    grid-area: help;
+  }
+  .content {
+    grid-area: main;
+  }
+}
+
+footer {
+  text-align: center;
+  color: #555;
+}
